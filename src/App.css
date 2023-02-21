@@ -1,6 +1,10 @@
 /* Import font from https://fonts.google.com/specimen/Red+Hat+Text */
 @import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:700&display=swap');
 
+:root {
+  --soft-red: #fb6087;
+}
+
 h1 {
   color: white;
   margin: 100px;
@@ -22,6 +26,19 @@ body {
   background-size: cover;
   position: fixed;
   bottom: 0;
+}
+
+.social-container {
+  margin: 20px;
+}
+
+.social-icon {
+  margin: 15px;
+}
+
+.social-icon img:hover {
+
+  filter: invert(53%) sepia(26%) saturate(1217%) hue-rotate(296deg) brightness(95%) contrast(107%);
 }
 
 footer {
