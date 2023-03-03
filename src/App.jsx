@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Social from './components/Social.jsx';
+import TimeArea from './components/TimeArea';
 import fb from './images/icon-facebook.svg';
 import ig from './images/icon-instagram.svg';
 import pt from './images/icon-pinterest.svg';
@@ -13,6 +14,8 @@ class App extends Component {
         <main>
           <div className="mountains-container"></div>
           <h1>WE'RE LAUNCHING SOON</h1>
+
+          <TimeArea />
         </main>
         
         <footer>

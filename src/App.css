@@ -14,7 +14,7 @@ h1 {
 
 body {
   background-image: url('./images/bg-stars.svg');
-  background-color: hsl(234, 17%, 12%);
+  background-color: hsl(235, 16%, 14%);
   text-align: center;
   font-family: 'Red Hat Text';
 }
@@ -39,6 +39,66 @@ body {
 .social-icon img:hover {
 
   filter: invert(53%) sepia(26%) saturate(1217%) hue-rotate(296deg) brightness(95%) contrast(107%);
+}
+
+.time-area {
+  display: flex;
+  justify-content: center;
+}
+
+.time-cell {
+  color: var(--soft-red);
+  margin: 1%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 13px;
+
+}
+
+.rect {
+  width: 150px;
+  height: 75px;
+  background-color: gray;
+  border-radius: 10px;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.rect p {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.top-rect {
+  background-color: hsl(233, 26%, 21%);
+  align-items: flex-end;
+
+}
+
+.bottom-rect {
+  background-color: hsl(236, 21%, 26%);
+  box-shadow: 0 13px 0px 0px hsl(234, 17%, 12%);
+}
+
+.time-cell .angle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: hsl(234, 17%, 12%);
+  top: 68px;
+}
+
+.time-cell .left {
+  left: -7px;
+}
+
+.time-cell .right {
+  right: -7px;
 }
 
 footer {
