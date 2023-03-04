@@ -10,6 +10,12 @@ export default class TimeCell extends React.Component {
     }
   }
 
+  componentDidUpdate() {
+    if (this.state.value !== this.props.value) {
+      this.setState({ value: this.props.value });
+    }
+  }
+
   render() {
     return (
       <div className="time-cell">
