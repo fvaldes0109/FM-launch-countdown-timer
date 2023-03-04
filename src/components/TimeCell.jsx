@@ -34,7 +34,7 @@ export default class TimeCell extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (this.state.value !== this.props.value) {
       this.setState({ value: this.props.value, cells: [
-          <div className="time-cell new" key="1">
+          <div className="time-cell new" key={`1-${this.props.label}`}>
             <div className="angle left"></div>
             <div className="angle right"></div>
 
@@ -45,7 +45,7 @@ export default class TimeCell extends React.Component {
               <p>{this.props.value}</p>
             </div>
           </div>,
-          <div className="time-cell old" key="2">
+          <div className="time-cell old" key={`2-${this.props.label}`}>
             <div className="angle left"></div>
             <div className="angle right"></div>
 
@@ -61,7 +61,7 @@ export default class TimeCell extends React.Component {
     }
     else if (prevState.cells.length === 2 && this.props.label !== 'SECONDS') {
       this.setState({ cells: [
-        <div className="time-cell" key="2">
+        <div className="time-cell" key={`2-${this.props.label}`}>
             <div className="angle left"></div>
             <div className="angle right"></div>
 

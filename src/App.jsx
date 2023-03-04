@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './Mobile.css';
 
 import Social from './components/Social.jsx';
 import TimeArea from './components/TimeArea';
