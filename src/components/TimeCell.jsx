@@ -20,10 +20,10 @@ export default class TimeCell extends React.Component {
           <div className="angle right"></div>
 
           <div className="rect top-rect">
-            <p>{this.state.value}</p>
+            <p>{this.parseValue(this.state.value)}</p>
           </div>
           <div className="rect bottom-rect">
-            <p>{this.state.value}</p>
+            <p>{this.parseValue(this.state.value)}</p>
           </div>
         </div>
       ]);
@@ -39,10 +39,10 @@ export default class TimeCell extends React.Component {
             <div className="angle right"></div>
 
             <div className="rect top-rect">
-              <p>{this.props.value}</p>
+              <p>{this.parseValue(this.props.value)}</p>
             </div>
             <div className="rect bottom-rect">
-              <p>{this.props.value}</p>
+              <p>{this.parseValue(this.props.value)}</p>
             </div>
           </div>,
           <div className="time-cell old" key={`2-${this.props.label}`}>
@@ -50,10 +50,10 @@ export default class TimeCell extends React.Component {
             <div className="angle right"></div>
 
             <div className="rect top-rect">
-              <p>{this.state.value}</p>
+              <p>{this.parseValue(this.state.value)}</p>
             </div>
             <div className="rect bottom-rect">
-              <p>{this.state.value}</p>
+              <p>{this.parseValue(this.state.value)}</p>
             </div>
           </div>
         ]
@@ -66,14 +66,18 @@ export default class TimeCell extends React.Component {
             <div className="angle right"></div>
 
             <div className="rect top-rect">
-              <p>{this.state.value}</p>
+              <p>{this.parseValue(this.state.value)}</p>
             </div>
             <div className="rect bottom-rect">
-              <p>{this.state.value}</p>
+              <p>{this.parseValue(this.state.value)}</p>
             </div>
           </div>
       ]})
     }
+  }
+
+  parseValue(val) {
+    return val >= 10 ? val.toString() : '0' + val.toString();
   }
 
   render() {
