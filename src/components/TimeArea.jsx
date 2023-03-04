@@ -10,7 +10,7 @@ export default class TimeArea extends React.Component {
       days: 8,
       hours: 23,
       minutes: 55,
-      seconds: 41,
+      seconds: 3,
     }
   }
 
@@ -25,7 +25,6 @@ export default class TimeArea extends React.Component {
   }
 
   tick() {
-    console.log(this.state.seconds)
     const seconds = (this.state.seconds - 1 + 60) % 60;
     const minutes = seconds !== 59 ? this.state.minutes : (this.state.minutes - 1 + 60) % 60;
     const hours = minutes !== 59 || seconds !== 59 ? this.state.hours : (this.state.hours - 1 + 24) % 24;
@@ -37,10 +36,10 @@ export default class TimeArea extends React.Component {
   render() {
     return (
       <div className="time-area">
-        <TimeCell value={this.state.days} />
-        <TimeCell value={this.state.hours} />
-        <TimeCell value={this.state.minutes} />
-        <TimeCell value={this.state.seconds} />
+        <TimeCell label="DAYS" value={this.state.days} />
+        <TimeCell label="HOURS" value={this.state.hours} />
+        <TimeCell label="MINUTES" value={this.state.minutes} />
+        <TimeCell label="SECONDS" value={this.state.seconds} />
       </div>
     );
   }
