@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: <https://www.frontendmentor.io/solutions/solution-with-react-and-animations-cp8CE-MP5K>
+- Live Site URL: <https://fvaldes0109.github.io/FM-launch-countdown-timer/>
 
 ## My process
 
